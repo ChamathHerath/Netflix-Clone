@@ -12,27 +12,34 @@
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
-
+    <!-- NAVBAR -->
     <header>
 
         <div class="logo">NETFLIX</div>
 
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Movies</a>
-            <a href="#">TV Shows</a>
-            <a href="#">My List</a>
+            <a href="#home">Home</a>
+            <a href="#movies">Movies</a>
+            <a href="#tvshows">TV Shows</a>
+            <a href="#mylist">My List</a>
         </nav>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search movies..."
+            >
+            <span>🔍</span>
+        </div>
 
         <button class="signin-btn">Sign In</button>
 
     </header>
 
 
-    <!-- ================= HERO SECTION ================= -->
-
-    <section class="hero">
+    <!-- HERO -->
+    <section class="hero" id="home">
 
         <div class="hero-content">
 
@@ -60,263 +67,252 @@
     </section>
 
 
-    <!-- ================= TRENDING ================= -->
+    <!-- MOVIES -->
+    <main id="movies">
 
-    <section class="movies-section">
+        <!-- TRENDING -->
+        <section class="movies-section">
 
-        <h2>Trending Now</h2>
+            <h2>Trending Now</h2>
 
-        <div class="movie-container">
+            <div class="movie-container">
 
-            <div class="movie-card">
+                <div class="movie-card">
 
-                <img src="https://image.tmdb.org/t/p/w500/1XDDXPXGiI8id7MrUxK36ke7gkX.jpg"
-                    alt="Moana 2">
+                    <img
+                        src="https://image.tmdb.org/t/p/w500/1XDDXPXGiI8id7MrUxK36ke7gkX.jpg"
+                        alt="Moana 2"
+                    >
 
-                <div class="movie-info">
+                    <div class="movie-info">
+                        <h3>Moana 2</h3>
+                        <p>⭐ 7.6 | 2024</p>
+                    </div>
 
-                    <h3>Moana 2</h3>
+                </div>
 
-                    <p>⭐ 7.6 &nbsp; | &nbsp; 2024</p>
+
+                <div class="movie-card">
+
+                    <img
+                        src="https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg"
+                        alt="Deadpool"
+                    >
+
+                    <div class="movie-info">
+                        <h3>Deadpool</h3>
+                        <p>⭐ 8.0 | 2024</p>
+                    </div>
+
+                </div>
+
+
+                <div class="movie-card">
+
+                    <img
+                        src="https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg"
+                        alt="Gladiator II"
+                    >
+
+                    <div class="movie-info">
+                        <h3>Gladiator II</h3>
+                        <p>⭐ 7.1 | 2024</p>
+                    </div>
+
+                </div>
+
+
+                <div class="movie-card">
+
+                    <img
+                        src="https://image.tmdb.org/t/p/w500/5CemD1I8k1R0R7cK4yK6a5Q5y7A.jpg"
+                        alt="Venom"
+                    >
+
+                    <div class="movie-info">
+                        <h3>Venom</h3>
+                        <p>⭐ 7.2 | 2024</p>
+                    </div>
+
+                </div>
+
+
+                <div class="movie-card">
+
+                    <img
+                        src="https://image.tmdb.org/t/p/w500/q719jXXEzOoYaps6babgKnONONX.jpg"
+                        alt="Inside Out 2"
+                    >
+
+                    <div class="movie-info">
+                        <h3>Inside Out 2</h3>
+                        <p>⭐ 8.0 | 2024</p>
+                    </div>
 
                 </div>
 
             </div>
 
+        </section>
 
-            <div class="movie-card">
 
-                <img src="https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg"
-                    alt="Deadpool">
+        <!-- POPULAR -->
+        <section class="movies-section">
 
-                <div class="movie-info">
+            <h2>Popular Movies</h2>
 
-                    <h3>Deadpool</h3>
+            <div class="movie-container">
 
-                    <p>⭐ 8.0 &nbsp; | &nbsp; 2024</p>
+                <div class="movie-card">
+
+                    <img
+                        src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg"
+                        alt="Wonder Woman"
+                    >
+
+                    <div class="movie-info">
+                        <h3>Wonder Woman</h3>
+                        <p>⭐ 7.4 | 2020</p>
+                    </div>
+
+                </div>
+
+
+                <div class="movie-card">
+
+                    <img
+                        src="https://image.tmdb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg"
+                        alt="Avengers"
+                    >
+
+                    <div class="movie-info">
+                        <h3>Avengers</h3>
+                        <p>⭐ 8.4 | 2018</p>
+                    </div>
+
+                </div>
+
+
+                <div class="movie-card">
+
+                    <img
+                        src="https://image.tmdb.org/t/p/w500/6ELCZlTA5lGUops70hKdB83WJxH.jpg"
+                        alt="Spider-Man"
+                    >
+
+                    <div class="movie-info">
+                        <h3>Spider-Man</h3>
+                        <p>⭐ 8.2 | 2021</p>
+                    </div>
+
+                </div>
+
+
+                <div class="movie-card">
+
+                    <img
+                        src="https://image.tmdb.org/t/p/w500/9O1Iy9od7vL2q9T8w5s6x3j2.jpg"
+                        alt="The Batman"
+                    >
+
+                    <div class="movie-info">
+                        <h3>The Batman</h3>
+                        <p>⭐ 7.8 | 2022</p>
+                    </div>
 
                 </div>
 
             </div>
 
+        </section>
 
-            <div class="movie-card">
 
-                <img src="https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg"
-                    alt="Gladiator II">
+        <!-- NETFLIX ORIGINALS -->
+        <section class="movies-section">
 
-                <div class="movie-info">
+            <h2>Netflix Originals</h2>
 
-                    <h3>Gladiator II</h3>
+            <div class="movie-container">
 
-                    <p>⭐ 7.1 &nbsp; | &nbsp; 2024</p>
+                <div class="movie-card">
+
+                    <img
+                        src="https://image.tmdb.org/t/p/w500/49zB8n6y5J5J3v4Y7J3L4M5N6O.jpg"
+                        alt="Red Notice"
+                    >
+
+                    <div class="movie-info">
+                        <h3>Red Notice</h3>
+                        <p>⭐ 7.0 | 2021</p>
+                    </div>
+
+                </div>
+
+
+                <div class="movie-card">
+
+                    <img
+                        src="https://image.tmdb.org/t/p/w500/6f5M1L5Y5N3X5N8M3L5P6Q7R8S.jpg"
+                        alt="Extraction"
+                    >
+
+                    <div class="movie-info">
+                        <h3>Extraction</h3>
+                        <p>⭐ 7.8 | 2020</p>
+                    </div>
+
+                </div>
+
+
+                <div class="movie-card">
+
+                    <img
+                        src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg"
+                        alt="Bird Box"
+                    >
+
+                    <div class="movie-info">
+                        <h3>Bird Box</h3>
+                        <p>⭐ 6.8 | 2018</p>
+                    </div>
+
+                </div>
+
+
+                <div class="movie-card">
+
+                    <img
+                        src="https://image.tmdb.org/t/p/w500/7D2Q8M5J3L6P9N4R5T7V8X2Y.jpg"
+                        alt="The Gray Man"
+                    >
+
+                    <div class="movie-info">
+                        <h3>The Gray Man</h3>
+                        <p>⭐ 7.0 | 2022</p>
+                    </div>
 
                 </div>
 
             </div>
 
+        </section>
 
-            <div class="movie-card">
+    </main>
 
-                <img src="https://image.tmdb.org/t/p/w500/5CemD1I8k1R0R7cK4yK6a5Q5y7A.jpg"
-                    alt="Venom">
 
-                <div class="movie-info">
+    <!-- NO RESULTS -->
+    <div id="noResults" class="no-results">
+        <h2>No movies found 😔</h2>
+        <p>Try searching for another movie.</p>
+    </div>
 
-                    <h3>Venom</h3>
 
-                    <p>⭐ 7.2 &nbsp; | &nbsp; 2024</p>
-
-                </div>
-
-            </div>
-
-
-            <div class="movie-card">
-
-                <img src="https://image.tmdb.org/t/p/w500/q719jXXEzOoYaps6babgKnONONX.jpg"
-                    alt="Inside Out 2">
-
-                <div class="movie-info">
-
-                    <h3>Inside Out 2</h3>
-
-                    <p>⭐ 8.0 &nbsp; | &nbsp; 2024</p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= POPULAR MOVIES ================= -->
-
-    <section class="movies-section">
-
-        <h2>Popular Movies</h2>
-
-        <div class="movie-container">
-
-
-            <div class="movie-card">
-
-                <img src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg"
-                    alt="Wonder Woman">
-
-                <div class="movie-info">
-
-                    <h3>Wonder Woman</h3>
-
-                    <p>⭐ 7.4 &nbsp; | &nbsp; 2020</p>
-
-                </div>
-
-            </div>
-
-
-            <div class="movie-card">
-
-                <img src="https://image.tmdb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg"
-                    alt="Avengers">
-
-                <div class="movie-info">
-
-                    <h3>Avengers</h3>
-
-                    <p>⭐ 8.4 &nbsp; | &nbsp; 2018</p>
-
-                </div>
-
-            </div>
-
-
-            <div class="movie-card">
-
-                <img src="https://image.tmdb.org/t/p/w500/6ELCZlTA5lGUops70hKdB83WJxH.jpg"
-                    alt="Spider-Man">
-
-                <div class="movie-info">
-
-                    <h3>Spider-Man</h3>
-
-                    <p>⭐ 8.2 &nbsp; | &nbsp; 2021</p>
-
-                </div>
-
-            </div>
-
-
-            <div class="movie-card">
-
-                <img src="https://image.tmdb.org/t/p/w500/9O1Iy9od7vL2q9T8w5s6x3j2.jpg"
-                    alt="The Batman">
-
-                <div class="movie-info">
-
-                    <h3>The Batman</h3>
-
-                    <p>⭐ 7.8 &nbsp; | &nbsp; 2022</p>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= NETFLIX ORIGINALS ================= -->
-
-    <section class="movies-section">
-
-        <h2>Netflix Originals</h2>
-
-        <div class="movie-container">
-
-
-            <div class="movie-card">
-
-                <img src="https://image.tmdb.org/t/p/w500/49zB8n6y5J5J3v4Y7J3L4M5N6O.jpg"
-                    alt="Netflix Movie">
-
-                <div class="movie-info">
-
-                    <h3>Red Notice</h3>
-
-                    <p>⭐ 7.0 &nbsp; | &nbsp; 2021</p>
-
-                </div>
-
-            </div>
-
-
-            <div class="movie-card">
-
-                <img src="https://image.tmdb.org/t/p/w500/6f5M1L5Y5N3X5N8M3L5P6Q7R8S.jpg"
-                    alt="Netflix Movie">
-
-                <div class="movie-info">
-
-                    <h3>Extraction</h3>
-
-                    <p>⭐ 7.8 &nbsp; | &nbsp; 2020</p>
-
-                </div>
-
-            </div>
-
-
-            <div class="movie-card">
-
-                <img src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg"
-                    alt="Netflix Movie">
-
-                <div class="movie-info">
-
-                    <h3>Bird Box</h3>
-
-                    <p>⭐ 6.8 &nbsp; | &nbsp; 2018</p>
-
-                </div>
-
-            </div>
-
-
-            <div class="movie-card">
-
-                <img src="https://image.tmdb.org/t/p/w500/7D2Q8M5J3L6P9N4R5T7V8X2Y.jpg"
-                    alt="Netflix Movie">
-
-                <div class="movie-info">
-
-                    <h3>The Gray Man</h3>
-
-                    <p>⭐ 7.0 &nbsp; | &nbsp; 2022</p>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= FOOTER ================= -->
-
+    <!-- FOOTER -->
     <footer>
 
         <div class="footer-logo">NETFLIX</div>
 
-        <p>
-            Questions? Contact us.
-        </p>
+        <p>Questions? Contact us.</p>
 
         <div class="footer-links">
 
@@ -333,6 +329,8 @@
 
     </footer>
 
+
+    <script src="script.js"></script>
 
 </body>
 

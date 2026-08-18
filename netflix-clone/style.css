@@ -27,9 +27,10 @@ header {
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
 
     padding: 0 5%;
+
+    gap: 30px;
 
     position: fixed;
     top: 0;
@@ -45,11 +46,15 @@ header {
     font-weight: bold;
 
     letter-spacing: 1px;
+
+    margin-right: 20px;
 }
 
 nav {
     display: flex;
-    gap: 28px;
+    gap: 25px;
+
+    flex: 1;
 }
 
 nav a {
@@ -66,6 +71,50 @@ nav a:hover {
     color: #aaa;
 }
 
+
+/* ================= SEARCH ================= */
+
+.search-box {
+    width: 210px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+
+    background: #222;
+
+    border: 1px solid #555;
+
+    border-radius: 4px;
+
+    padding: 0 10px;
+}
+
+.search-box input {
+    width: 100%;
+
+    background: transparent;
+
+    border: none;
+
+    outline: none;
+
+    color: white;
+
+    font-size: 14px;
+}
+
+.search-box input::placeholder {
+    color: #aaa;
+}
+
+.search-box span {
+    font-size: 15px;
+}
+
+
+/* ================= SIGN IN ================= */
+
 .signin-btn {
     background: #e50914;
 
@@ -73,13 +122,15 @@ nav a:hover {
 
     border: none;
 
-    padding: 9px 20px;
+    padding: 9px 18px;
 
     border-radius: 4px;
 
+    cursor: pointer;
+
     font-size: 14px;
 
-    cursor: pointer;
+    white-space: nowrap;
 
     transition: 0.3s;
 }
@@ -207,7 +258,7 @@ nav a:hover {
 }
 
 
-/* ================= MOVIE SECTIONS ================= */
+/* ================= MOVIES ================= */
 
 .movies-section {
     padding: 30px 5%;
@@ -218,9 +269,6 @@ nav a:hover {
 
     margin-bottom: 18px;
 }
-
-
-/* ================= MOVIE CONTAINER ================= */
 
 .movie-container {
     display: flex;
@@ -286,7 +334,7 @@ nav a:hover {
 }
 
 .movie-card:hover img {
-    filter: brightness(0.65);
+    filter: brightness(0.6);
 }
 
 
@@ -300,7 +348,7 @@ nav a:hover {
 
     width: 100%;
 
-    padding: 35px 12px 12px;
+    padding: 40px 12px 12px;
 
     background: linear-gradient(
         transparent,
@@ -326,6 +374,25 @@ nav a:hover {
     color: #ddd;
 
     font-size: 13px;
+}
+
+
+/* ================= NO RESULTS ================= */
+
+.no-results {
+    display: none;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    color: #aaa;
+}
+
+.no-results h2 {
+    color: white;
+
+    margin-bottom: 10px;
 }
 
 
@@ -382,28 +449,65 @@ footer {
 }
 
 
-/* ================= RESPONSIVE ================= */
+/* ================= TABLET ================= */
+
+@media (max-width: 1000px) {
+
+    header {
+        gap: 15px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .search-box {
+        width: 170px;
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
 
 @media (max-width: 768px) {
 
     header {
+        height: 65px;
+
         padding: 0 20px;
+
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 24px;
+
+        margin-right: 0;
     }
 
     nav {
         display: none;
     }
 
-    .logo {
-        font-size: 25px;
+    .search-box {
+        margin-left: auto;
+
+        width: 160px;
+    }
+
+    .signin-btn {
+        padding: 8px 12px;
+
+        font-size: 12px;
     }
 
     .hero {
         height: 550px;
 
-        padding: 20px;
+        margin-top: 65px;
 
-        background-position: center;
+        padding: 20px;
     }
 
     .hero-content h1 {
@@ -429,15 +533,20 @@ footer {
 
         gap: 12px;
     }
+
 }
 
 
+/* ================= SMALL MOBILE ================= */
+
 @media (max-width: 450px) {
 
-    .signin-btn {
-        padding: 7px 12px;
+    .search-box {
+        width: 120px;
+    }
 
-        font-size: 12px;
+    .signin-btn {
+        display: none;
     }
 
     .hero-content h1 {
