@@ -22,18 +22,15 @@ body {
 header {
     width: 100%;
     height: 70px;
-
     background: #111;
 
     display: flex;
     align-items: center;
 
     padding: 0 5%;
-
     gap: 30px;
 
     position: fixed;
-
     top: 0;
     left: 0;
 
@@ -42,31 +39,22 @@ header {
 
 .logo {
     color: #e50914;
-
     font-size: 30px;
-
     font-weight: bold;
-
     letter-spacing: 1px;
-
     margin-right: 20px;
 }
 
 nav {
     display: flex;
-
     gap: 25px;
-
     flex: 1;
 }
 
 nav a {
     color: white;
-
     text-decoration: none;
-
     font-size: 15px;
-
     transition: 0.3s;
 }
 
@@ -79,17 +67,14 @@ nav a:hover {
 
 .search-box {
     width: 210px;
-
     height: 36px;
 
     display: flex;
-
     align-items: center;
 
     background: #222;
 
     border: 1px solid #555;
-
     border-radius: 4px;
 
     padding: 0 10px;
@@ -101,7 +86,6 @@ nav a:hover {
     background: transparent;
 
     border: none;
-
     outline: none;
 
     color: white;
@@ -199,7 +183,6 @@ nav a:hover {
     font-size: 60px;
 
     margin-top: 15px;
-
     margin-bottom: 15px;
 }
 
@@ -354,7 +337,6 @@ nav a:hover {
     position: absolute;
 
     bottom: 0;
-
     left: 0;
 
     width: 100%;
@@ -407,7 +389,7 @@ nav a:hover {
 }
 
 
-/* ================= MOVIE DETAILS PAGE ================= */
+/* ================= MOVIE DETAILS ================= */
 
 .movie-details-page {
     min-height: 750px;
@@ -442,7 +424,7 @@ nav a:hover {
 }
 
 
-/* POSTER */
+/* ================= MOVIE POSTER ================= */
 
 .details-poster {
     width: 300px;
@@ -462,7 +444,7 @@ nav a:hover {
 }
 
 
-/* DETAILS CONTENT */
+/* ================= MOVIE CONTENT ================= */
 
 .details-content {
     max-width: 650px;
@@ -499,7 +481,7 @@ nav a:hover {
 }
 
 
-/* GENRE */
+/* ================= GENRE ================= */
 
 .genre {
     display: flex;
@@ -524,7 +506,7 @@ nav a:hover {
 }
 
 
-/* DESCRIPTION */
+/* ================= DESCRIPTION ================= */
 
 .description {
     color: #ccc;
@@ -537,7 +519,7 @@ nav a:hover {
 }
 
 
-/* EXTRA DETAILS */
+/* ================= EXTRA DETAILS ================= */
 
 .movie-extra {
     border-top: 1px solid #333;
@@ -551,6 +533,109 @@ nav a:hover {
 
 .movie-extra strong {
     color: white;
+}
+
+
+/* ================= TRAILER MODAL ================= */
+
+.trailer-modal {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.9);
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 2000;
+
+    padding: 20px;
+}
+
+.trailer-modal.active {
+    display: flex;
+}
+
+.trailer-content {
+    width: 900px;
+
+    max-width: 100%;
+
+    background: #181818;
+
+    padding: 25px;
+
+    border-radius: 8px;
+
+    position: relative;
+
+    box-shadow:
+        0 10px 50px rgba(0, 0, 0, 0.8);
+}
+
+.trailer-content h2 {
+    font-size: 22px;
+
+    margin-bottom: 20px;
+}
+
+.close-btn {
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #333;
+
+    color: white;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    z-index: 5;
+}
+
+.close-btn:hover {
+    background: #e50914;
+}
+
+.video-container {
+    position: relative;
+
+    width: 100%;
+
+    padding-bottom: 56.25%;
+
+    height: 0;
+
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border: none;
 }
 
 
@@ -687,7 +772,7 @@ footer {
     }
 
 
-    /* DETAILS MOBILE */
+    /* MOVIE DETAILS */
 
     .movie-details-page {
         padding: 110px 20px 60px;
@@ -723,6 +808,21 @@ footer {
         gap: 12px;
     }
 
+
+    /* TRAILER */
+
+    .trailer-content {
+        padding: 20px 15px;
+    }
+
+    .trailer-content h2 {
+        font-size: 17px;
+
+        padding-right: 35px;
+    }
+
+
+    /* FOOTER */
 
     .footer-links {
         flex-direction: column;
