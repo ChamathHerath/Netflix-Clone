@@ -19,7 +19,7 @@
 <body>
 
 
-    <!-- NAVBAR -->
+    <!-- ================= NAVBAR ================= -->
 
     <header>
 
@@ -41,7 +41,7 @@
                 TV Shows
             </a>
 
-            <a href="#">
+            <a href="index.html#mylist">
                 My List
             </a>
 
@@ -54,8 +54,7 @@
     </header>
 
 
-
-    <!-- MOVIE DETAILS -->
+    <!-- ================= MOVIE DETAILS ================= -->
 
     <section class="movie-details-page">
 
@@ -67,12 +66,12 @@
             <div class="details-poster">
 
                 <img
+                    id="detailsPoster"
                     src="https://image.tmdb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg"
-                    alt="Avengers Infinity War"
+                    alt="Movie Poster"
                 >
 
             </div>
-
 
 
             <!-- INFORMATION -->
@@ -84,19 +83,19 @@
                 </span>
 
 
-                <h1>
+                <h1 id="detailsTitle">
                     Avengers: Infinity War
                 </h1>
 
 
                 <div class="details-meta">
 
-                    <span>
+                    <span id="detailsYear">
                         2018
                     </span>
 
                     <span>
-                        ⭐ 8.4
+                        ⭐ <span id="detailsRating">8.4</span>
                     </span>
 
                     <span>
@@ -145,11 +144,18 @@
 
                 <div class="buttons">
 
-                    <button class="play-btn">
+                    <button
+                        class="play-btn"
+                        id="trailerBtn"
+                    >
                         ▶ Watch Trailer
                     </button>
 
-                    <button class="info-btn">
+
+                    <button
+                        class="info-btn"
+                        id="myListBtn"
+                    >
                         + My List
                     </button>
 
@@ -203,8 +209,43 @@
     </section>
 
 
+    <!-- ================= TRAILER POPUP ================= -->
 
-    <!-- FOOTER -->
+    <div
+        class="trailer-modal"
+        id="trailerModal"
+    >
+
+        <div class="trailer-content">
+
+            <button
+                class="close-btn"
+                id="closeTrailer"
+            >
+                ✕
+            </button>
+
+            <h2>
+                Avengers: Infinity War - Trailer
+            </h2>
+
+            <div class="video-container">
+
+                <iframe
+                    src="https://www.youtube.com/embed/6ZfuNTqbHE8"
+                    title="Avengers Infinity War Trailer"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
 
     <footer>
 
@@ -245,6 +286,8 @@
 
     </footer>
 
+
+    <script src="script.js"></script>
 
 </body>
 
