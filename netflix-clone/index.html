@@ -34,7 +34,9 @@
             <span>🔍</span>
         </div>
 
-        <button class="signin-btn">Sign In</button>
+        <button class="signin-btn">
+            Sign In
+        </button>
 
     </header>
 
@@ -45,14 +47,20 @@
 
         <div class="hero-content">
 
-            <span class="featured">NETFLIX ORIGINAL</span>
+            <span class="featured">
+                NETFLIX ORIGINAL
+            </span>
 
-            <h1>Stranger Things</h1>
+            <h1>
+                Stranger Things
+            </h1>
 
             <div class="hero-meta">
+
                 <span>2026</span>
                 <span>16+</span>
                 <span>4 Seasons</span>
+
             </div>
 
             <p>
@@ -78,11 +86,13 @@
     <main id="movies">
 
 
-        <!-- TRENDING NOW -->
+        <!-- TRENDING -->
 
         <section class="movies-section">
 
-            <h2>Trending Now</h2>
+            <h2>
+                Trending Now
+            </h2>
 
             <div class="movie-container">
 
@@ -91,7 +101,9 @@
 
                 <div
                     class="movie-card"
-                    onclick="window.location.href='movie.html'"
+                    data-movie="Moana 2"
+                    data-image="https://image.tmdb.org/t/p/w500/1XDDXPXGiI8id7MrUxK36ke7gkX.jpg"
+                    onclick="openMovie('Moana 2', '2024', '7.6', 'https://image.tmdb.org/t/p/w500/1XDDXPXGiI8id7MrUxK36ke7gkX.jpg')"
                 >
 
                     <img
@@ -101,9 +113,13 @@
 
                     <div class="movie-info">
 
-                        <h3>Moana 2</h3>
+                        <h3>
+                            Moana 2
+                        </h3>
 
-                        <p>⭐ 7.6 | 2024</p>
+                        <p>
+                            ⭐ 7.6 | 2024
+                        </p>
 
                     </div>
 
@@ -114,7 +130,9 @@
 
                 <div
                     class="movie-card"
-                    onclick="window.location.href='movie.html'"
+                    data-movie="Deadpool"
+                    data-image="https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg"
+                    onclick="openMovie('Deadpool', '2024', '8.0', 'https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg')"
                 >
 
                     <img
@@ -124,9 +142,13 @@
 
                     <div class="movie-info">
 
-                        <h3>Deadpool</h3>
+                        <h3>
+                            Deadpool
+                        </h3>
 
-                        <p>⭐ 8.0 | 2024</p>
+                        <p>
+                            ⭐ 8.0 | 2024
+                        </p>
 
                     </div>
 
@@ -137,7 +159,9 @@
 
                 <div
                     class="movie-card"
-                    onclick="window.location.href='movie.html'"
+                    data-movie="Gladiator II"
+                    data-image="https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg"
+                    onclick="openMovie('Gladiator II', '2024', '7.1', 'https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg')"
                 >
 
                     <img
@@ -147,9 +171,13 @@
 
                     <div class="movie-info">
 
-                        <h3>Gladiator II</h3>
+                        <h3>
+                            Gladiator II
+                        </h3>
 
-                        <p>⭐ 7.1 | 2024</p>
+                        <p>
+                            ⭐ 7.1 | 2024
+                        </p>
 
                     </div>
 
@@ -160,7 +188,9 @@
 
                 <div
                     class="movie-card"
-                    onclick="window.location.href='movie.html'"
+                    data-movie="Venom"
+                    data-image="https://image.tmdb.org/t/p/w500/5CemD1I8k1R0R7cK4yK6a5Q5y7A.jpg"
+                    onclick="openMovie('Venom', '2024', '7.2', 'https://image.tmdb.org/t/p/w500/5CemD1I8k1R0R7cK4yK6a5Q5y7A.jpg')"
                 >
 
                     <img
@@ -170,9 +200,13 @@
 
                     <div class="movie-info">
 
-                        <h3>Venom</h3>
+                        <h3>
+                            Venom
+                        </h3>
 
-                        <p>⭐ 7.2 | 2024</p>
+                        <p>
+                            ⭐ 7.2 | 2024
+                        </p>
 
                     </div>
 
@@ -183,7 +217,9 @@
 
                 <div
                     class="movie-card"
-                    onclick="window.location.href='movie.html'"
+                    data-movie="Inside Out 2"
+                    data-image="https://image.tmdb.org/t/p/w500/q719jXXEzOoYaps6babgKnONONX.jpg"
+                    onclick="openMovie('Inside Out 2', '2024', '8.0', 'https://image.tmdb.org/t/p/w500/q719jXXEzOoYaps6babgKnONONX.jpg')"
                 >
 
                     <img
@@ -193,9 +229,13 @@
 
                     <div class="movie-info">
 
-                        <h3>Inside Out 2</h3>
+                        <h3>
+                            Inside Out 2
+                        </h3>
 
-                        <p>⭐ 8.0 | 2024</p>
+                        <p>
+                            ⭐ 8.0 | 2024
+                        </p>
 
                     </div>
 
@@ -206,12 +246,13 @@
         </section>
 
 
-
-        <!-- POPULAR MOVIES -->
+        <!-- ================= POPULAR ================= -->
 
         <section class="movies-section">
 
-            <h2>Popular Movies</h2>
+            <h2>
+                Popular Movies
+            </h2>
 
             <div class="movie-container">
 
@@ -220,7 +261,9 @@
 
                 <div
                     class="movie-card"
-                    onclick="window.location.href='movie.html'"
+                    data-movie="Wonder Woman"
+                    data-image="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg"
+                    onclick="openMovie('Wonder Woman', '2020', '7.4', 'https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg')"
                 >
 
                     <img
@@ -230,9 +273,13 @@
 
                     <div class="movie-info">
 
-                        <h3>Wonder Woman</h3>
+                        <h3>
+                            Wonder Woman
+                        </h3>
 
-                        <p>⭐ 7.4 | 2020</p>
+                        <p>
+                            ⭐ 7.4 | 2020
+                        </p>
 
                     </div>
 
@@ -243,7 +290,9 @@
 
                 <div
                     class="movie-card"
-                    onclick="window.location.href='movie.html'"
+                    data-movie="Avengers"
+                    data-image="https://image.tmdb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg"
+                    onclick="openMovie('Avengers', '2018', '8.4', 'https://image.tmdb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg')"
                 >
 
                     <img
@@ -253,20 +302,26 @@
 
                     <div class="movie-info">
 
-                        <h3>Avengers</h3>
+                        <h3>
+                            Avengers
+                        </h3>
 
-                        <p>⭐ 8.4 | 2018</p>
+                        <p>
+                            ⭐ 8.4 | 2018
+                        </p>
 
                     </div>
 
                 </div>
 
 
-                <!-- SPIDER MAN -->
+                <!-- SPIDER-MAN -->
 
                 <div
                     class="movie-card"
-                    onclick="window.location.href='movie.html'"
+                    data-movie="Spider-Man"
+                    data-image="https://image.tmdb.org/t/p/w500/6ELCZlTA5lGUops70hKdB83WJxH.jpg"
+                    onclick="openMovie('Spider-Man', '2021', '8.2', 'https://image.tmdb.org/t/p/w500/6ELCZlTA5lGUops70hKdB83WJxH.jpg')"
                 >
 
                     <img
@@ -276,9 +331,13 @@
 
                     <div class="movie-info">
 
-                        <h3>Spider-Man</h3>
+                        <h3>
+                            Spider-Man
+                        </h3>
 
-                        <p>⭐ 8.2 | 2021</p>
+                        <p>
+                            ⭐ 8.2 | 2021
+                        </p>
 
                     </div>
 
@@ -289,7 +348,9 @@
 
                 <div
                     class="movie-card"
-                    onclick="window.location.href='movie.html'"
+                    data-movie="The Batman"
+                    data-image="https://image.tmdb.org/t/p/w500/9O1Iy9od7vL2q9T8w5s6x3j2.jpg"
+                    onclick="openMovie('The Batman', '2022', '7.8', 'https://image.tmdb.org/t/p/w500/9O1Iy9od7vL2q9T8w5s6x3j2.jpg')"
                 >
 
                     <img
@@ -299,9 +360,13 @@
 
                     <div class="movie-info">
 
-                        <h3>The Batman</h3>
+                        <h3>
+                            The Batman
+                        </h3>
 
-                        <p>⭐ 7.8 | 2022</p>
+                        <p>
+                            ⭐ 7.8 | 2022
+                        </p>
 
                     </div>
 
@@ -312,19 +377,22 @@
         </section>
 
 
-
-        <!-- NETFLIX ORIGINALS -->
+        <!-- ================= NETFLIX ORIGINALS ================= -->
 
         <section class="movies-section">
 
-            <h2>Netflix Originals</h2>
+            <h2>
+                Netflix Originals
+            </h2>
 
             <div class="movie-container">
 
 
                 <div
                     class="movie-card"
-                    onclick="window.location.href='movie.html'"
+                    data-movie="Red Notice"
+                    data-image="https://image.tmdb.org/t/p/w500/49zB8n6y5J5J3v4Y7J3L4M5N6O.jpg"
+                    onclick="openMovie('Red Notice', '2021', '7.0', 'https://image.tmdb.org/t/p/w500/49zB8n6y5J5J3v4Y7J3L4M5N6O.jpg')"
                 >
 
                     <img
@@ -334,9 +402,13 @@
 
                     <div class="movie-info">
 
-                        <h3>Red Notice</h3>
+                        <h3>
+                            Red Notice
+                        </h3>
 
-                        <p>⭐ 7.0 | 2021</p>
+                        <p>
+                            ⭐ 7.0 | 2021
+                        </p>
 
                     </div>
 
@@ -345,7 +417,9 @@
 
                 <div
                     class="movie-card"
-                    onclick="window.location.href='movie.html'"
+                    data-movie="Extraction"
+                    data-image="https://image.tmdb.org/t/p/w500/6f5M1L5Y5N3X5N8M3L5P6Q7R8S.jpg"
+                    onclick="openMovie('Extraction', '2020', '7.8', 'https://image.tmdb.org/t/p/w500/6f5M1L5Y5N3X5N8M3L5P6Q7R8S.jpg')"
                 >
 
                     <img
@@ -355,9 +429,13 @@
 
                     <div class="movie-info">
 
-                        <h3>Extraction</h3>
+                        <h3>
+                            Extraction
+                        </h3>
 
-                        <p>⭐ 7.8 | 2020</p>
+                        <p>
+                            ⭐ 7.8 | 2020
+                        </p>
 
                     </div>
 
@@ -366,7 +444,9 @@
 
                 <div
                     class="movie-card"
-                    onclick="window.location.href='movie.html'"
+                    data-movie="Bird Box"
+                    data-image="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg"
+                    onclick="openMovie('Bird Box', '2018', '6.8', 'https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg')"
                 >
 
                     <img
@@ -376,9 +456,13 @@
 
                     <div class="movie-info">
 
-                        <h3>Bird Box</h3>
+                        <h3>
+                            Bird Box
+                        </h3>
 
-                        <p>⭐ 6.8 | 2018</p>
+                        <p>
+                            ⭐ 6.8 | 2018
+                        </p>
 
                     </div>
 
@@ -387,7 +471,9 @@
 
                 <div
                     class="movie-card"
-                    onclick="window.location.href='movie.html'"
+                    data-movie="The Gray Man"
+                    data-image="https://image.tmdb.org/t/p/w500/7D2Q8M5J3L6P9N4R5T7V8X2Y.jpg"
+                    onclick="openMovie('The Gray Man', '2022', '7.0', 'https://image.tmdb.org/t/p/w500/7D2Q8M5J3L6P9N4R5T7V8X2Y.jpg')"
                 >
 
                     <img
@@ -397,9 +483,13 @@
 
                     <div class="movie-info">
 
-                        <h3>The Gray Man</h3>
+                        <h3>
+                            The Gray Man
+                        </h3>
 
-                        <p>⭐ 7.0 | 2022</p>
+                        <p>
+                            ⭐ 7.0 | 2022
+                        </p>
 
                     </div>
 
@@ -412,13 +502,55 @@
     </main>
 
 
-    <!-- NO RESULTS -->
+    <!-- ================= MY LIST ================= -->
 
-    <div id="noResults" class="no-results">
+    <section
+        class="my-list-section"
+        id="mylist"
+    >
 
-        <h2>No movies found 😔</h2>
+        <h2>
+            ❤️ My List
+        </h2>
 
-        <p>Try searching for another movie.</p>
+        <div
+            class="my-list-container"
+            id="myListContainer"
+        >
+        </div>
+
+        <div
+            class="empty-list"
+            id="emptyList"
+        >
+
+            <h3>
+                Your list is empty
+            </h3>
+
+            <p>
+                Add movies to your list and they will appear here.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= NO RESULTS ================= -->
+
+    <div
+        id="noResults"
+        class="no-results"
+    >
+
+        <h2>
+            No movies found 😔
+        </h2>
+
+        <p>
+            Try searching for another movie.
+        </p>
 
     </div>
 
@@ -437,13 +569,21 @@
 
         <div class="footer-links">
 
-            <a href="#">FAQ</a>
+            <a href="#">
+                FAQ
+            </a>
 
-            <a href="#">Help Center</a>
+            <a href="#">
+                Help Center
+            </a>
 
-            <a href="#">Terms of Use</a>
+            <a href="#">
+                Terms of Use
+            </a>
 
-            <a href="#">Privacy</a>
+            <a href="#">
+                Privacy
+            </a>
 
         </div>
 
