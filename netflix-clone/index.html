@@ -12,26 +12,31 @@
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
+    <!-- NAVBAR -->
 
     <header>
 
-        <div class="logo">NETFLIX</div>
+        <div class="logo">
+            NETFLIX
+        </div>
 
         <nav>
             <a href="#home">Home</a>
             <a href="#movies">Movies</a>
-            <a href="#tvshows">TV Shows</a>
+            <a href="#genres">Genres</a>
             <a href="#mylist">My List</a>
         </nav>
 
         <div class="search-box">
+
             <input
                 type="text"
                 id="searchInput"
                 placeholder="Search movies..."
             >
+
             <span>🔍</span>
+
         </div>
 
         <button class="signin-btn">
@@ -41,7 +46,7 @@
     </header>
 
 
-    <!-- ================= HERO ================= -->
+    <!-- HERO -->
 
     <section class="hero" id="home">
 
@@ -81,9 +86,82 @@
     </section>
 
 
-    <!-- ================= MOVIES ================= -->
+    <!-- MOVIES -->
 
     <main id="movies">
+
+        <!-- GENRES -->
+
+        <section
+            class="genre-filter-section"
+            id="genres"
+        >
+
+            <h2>
+                Browse by Genre
+            </h2>
+
+            <div class="genre-buttons">
+
+                <button
+                    class="genre-btn active"
+                    data-genre="all"
+                >
+                    All
+                </button>
+
+                <button
+                    class="genre-btn"
+                    data-genre="action"
+                >
+                    Action
+                </button>
+
+                <button
+                    class="genre-btn"
+                    data-genre="comedy"
+                >
+                    Comedy
+                </button>
+
+                <button
+                    class="genre-btn"
+                    data-genre="adventure"
+                >
+                    Adventure
+                </button>
+
+                <button
+                    class="genre-btn"
+                    data-genre="animation"
+                >
+                    Animation
+                </button>
+
+                <button
+                    class="genre-btn"
+                    data-genre="fantasy"
+                >
+                    Fantasy
+                </button>
+
+                <button
+                    class="genre-btn"
+                    data-genre="horror"
+                >
+                    Horror
+                </button>
+
+                <button
+                    class="genre-btn"
+                    data-genre="sci-fi"
+                >
+                    Sci-Fi
+                </button>
+
+            </div>
+
+        </section>
 
 
         <!-- TRENDING -->
@@ -102,8 +180,13 @@
                 <div
                     class="movie-card"
                     data-movie="Moana 2"
-                    data-image="https://image.tmdb.org/t/p/w500/1XDDXPXGiI8id7MrUxK36ke7gkX.jpg"
-                    onclick="openMovie('Moana 2', '2024', '7.6', 'https://image.tmdb.org/t/p/w500/1XDDXPXGiI8id7MrUxK36ke7gkX.jpg')"
+                    data-genre="animation adventure fantasy"
+                    onclick="openMovie(
+                        'Moana 2',
+                        '2024',
+                        '7.6',
+                        'https://image.tmdb.org/t/p/w500/1XDDXPXGiI8id7MrUxK36ke7gkX.jpg'
+                    )"
                 >
 
                     <img
@@ -121,6 +204,10 @@
                             ⭐ 7.6 | 2024
                         </p>
 
+                        <small>
+                            Animation • Adventure
+                        </small>
+
                     </div>
 
                 </div>
@@ -131,8 +218,13 @@
                 <div
                     class="movie-card"
                     data-movie="Deadpool"
-                    data-image="https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg"
-                    onclick="openMovie('Deadpool', '2024', '8.0', 'https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg')"
+                    data-genre="action comedy adventure"
+                    onclick="openMovie(
+                        'Deadpool',
+                        '2024',
+                        '8.0',
+                        'https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg'
+                    )"
                 >
 
                     <img
@@ -150,6 +242,10 @@
                             ⭐ 8.0 | 2024
                         </p>
 
+                        <small>
+                            Action • Comedy
+                        </small>
+
                     </div>
 
                 </div>
@@ -160,8 +256,13 @@
                 <div
                     class="movie-card"
                     data-movie="Gladiator II"
-                    data-image="https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg"
-                    onclick="openMovie('Gladiator II', '2024', '7.1', 'https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg')"
+                    data-genre="action adventure"
+                    onclick="openMovie(
+                        'Gladiator II',
+                        '2024',
+                        '7.1',
+                        'https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg'
+                    )"
                 >
 
                     <img
@@ -179,6 +280,10 @@
                             ⭐ 7.1 | 2024
                         </p>
 
+                        <small>
+                            Action • Adventure
+                        </small>
+
                     </div>
 
                 </div>
@@ -189,8 +294,13 @@
                 <div
                     class="movie-card"
                     data-movie="Venom"
-                    data-image="https://image.tmdb.org/t/p/w500/5CemD1I8k1R0R7cK4yK6a5Q5y7A.jpg"
-                    onclick="openMovie('Venom', '2024', '7.2', 'https://image.tmdb.org/t/p/w500/5CemD1I8k1R0R7cK4yK6a5Q5y7A.jpg')"
+                    data-genre="action sci-fi adventure"
+                    onclick="openMovie(
+                        'Venom',
+                        '2024',
+                        '7.2',
+                        'https://image.tmdb.org/t/p/w500/5CemD1I8k1R0R7cK4yK6a5Q5y7A.jpg'
+                    )"
                 >
 
                     <img
@@ -208,6 +318,10 @@
                             ⭐ 7.2 | 2024
                         </p>
 
+                        <small>
+                            Action • Sci-Fi
+                        </small>
+
                     </div>
 
                 </div>
@@ -218,8 +332,13 @@
                 <div
                     class="movie-card"
                     data-movie="Inside Out 2"
-                    data-image="https://image.tmdb.org/t/p/w500/q719jXXEzOoYaps6babgKnONONX.jpg"
-                    onclick="openMovie('Inside Out 2', '2024', '8.0', 'https://image.tmdb.org/t/p/w500/q719jXXEzOoYaps6babgKnONONX.jpg')"
+                    data-genre="animation comedy adventure"
+                    onclick="openMovie(
+                        'Inside Out 2',
+                        '2024',
+                        '8.0',
+                        'https://image.tmdb.org/t/p/w500/q719jXXEzOoYaps6babgKnONONX.jpg'
+                    )"
                 >
 
                     <img
@@ -237,6 +356,10 @@
                             ⭐ 8.0 | 2024
                         </p>
 
+                        <small>
+                            Animation • Comedy
+                        </small>
+
                     </div>
 
                 </div>
@@ -246,7 +369,7 @@
         </section>
 
 
-        <!-- ================= POPULAR ================= -->
+        <!-- POPULAR -->
 
         <section class="movies-section">
 
@@ -262,8 +385,13 @@
                 <div
                     class="movie-card"
                     data-movie="Wonder Woman"
-                    data-image="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg"
-                    onclick="openMovie('Wonder Woman', '2020', '7.4', 'https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg')"
+                    data-genre="action fantasy adventure"
+                    onclick="openMovie(
+                        'Wonder Woman',
+                        '2020',
+                        '7.4',
+                        'https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg'
+                    )"
                 >
 
                     <img
@@ -281,6 +409,10 @@
                             ⭐ 7.4 | 2020
                         </p>
 
+                        <small>
+                            Action • Fantasy
+                        </small>
+
                     </div>
 
                 </div>
@@ -291,8 +423,13 @@
                 <div
                     class="movie-card"
                     data-movie="Avengers"
-                    data-image="https://image.tmdb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg"
-                    onclick="openMovie('Avengers', '2018', '8.4', 'https://image.tmdb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg')"
+                    data-genre="action adventure sci-fi"
+                    onclick="openMovie(
+                        'Avengers',
+                        '2018',
+                        '8.4',
+                        'https://image.tmdb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg'
+                    )"
                 >
 
                     <img
@@ -310,18 +447,27 @@
                             ⭐ 8.4 | 2018
                         </p>
 
+                        <small>
+                            Action • Adventure
+                        </small>
+
                     </div>
 
                 </div>
 
 
-                <!-- SPIDER-MAN -->
+                <!-- SPIDER MAN -->
 
                 <div
                     class="movie-card"
                     data-movie="Spider-Man"
-                    data-image="https://image.tmdb.org/t/p/w500/6ELCZlTA5lGUops70hKdB83WJxH.jpg"
-                    onclick="openMovie('Spider-Man', '2021', '8.2', 'https://image.tmdb.org/t/p/w500/6ELCZlTA5lGUops70hKdB83WJxH.jpg')"
+                    data-genre="action adventure sci-fi"
+                    onclick="openMovie(
+                        'Spider-Man',
+                        '2021',
+                        '8.2',
+                        'https://image.tmdb.org/t/p/w500/6ELCZlTA5lGUops70hKdB83WJxH.jpg'
+                    )"
                 >
 
                     <img
@@ -339,6 +485,10 @@
                             ⭐ 8.2 | 2021
                         </p>
 
+                        <small>
+                            Action • Adventure
+                        </small>
+
                     </div>
 
                 </div>
@@ -349,8 +499,13 @@
                 <div
                     class="movie-card"
                     data-movie="The Batman"
-                    data-image="https://image.tmdb.org/t/p/w500/9O1Iy9od7vL2q9T8w5s6x3j2.jpg"
-                    onclick="openMovie('The Batman', '2022', '7.8', 'https://image.tmdb.org/t/p/w500/9O1Iy9od7vL2q9T8w5s6x3j2.jpg')"
+                    data-genre="action adventure"
+                    onclick="openMovie(
+                        'The Batman',
+                        '2022',
+                        '7.8',
+                        'https://image.tmdb.org/t/p/w500/9O1Iy9od7vL2q9T8w5s6x3j2.jpg'
+                    )"
                 >
 
                     <img
@@ -368,6 +523,10 @@
                             ⭐ 7.8 | 2022
                         </p>
 
+                        <small>
+                            Action • Adventure
+                        </small>
+
                     </div>
 
                 </div>
@@ -377,7 +536,7 @@
         </section>
 
 
-        <!-- ================= NETFLIX ORIGINALS ================= -->
+        <!-- NETFLIX ORIGINALS -->
 
         <section class="movies-section">
 
@@ -388,11 +547,18 @@
             <div class="movie-container">
 
 
+                <!-- RED NOTICE -->
+
                 <div
                     class="movie-card"
                     data-movie="Red Notice"
-                    data-image="https://image.tmdb.org/t/p/w500/49zB8n6y5J5J3v4Y7J3L4M5N6O.jpg"
-                    onclick="openMovie('Red Notice', '2021', '7.0', 'https://image.tmdb.org/t/p/w500/49zB8n6y5J5J3v4Y7J3L4M5N6O.jpg')"
+                    data-genre="action comedy"
+                    onclick="openMovie(
+                        'Red Notice',
+                        '2021',
+                        '7.0',
+                        'https://image.tmdb.org/t/p/w500/49zB8n6y5J5J3v4Y7J3L4M5N6O.jpg'
+                    )"
                 >
 
                     <img
@@ -410,16 +576,27 @@
                             ⭐ 7.0 | 2021
                         </p>
 
+                        <small>
+                            Action • Comedy
+                        </small>
+
                     </div>
 
                 </div>
 
 
+                <!-- EXTRACTION -->
+
                 <div
                     class="movie-card"
                     data-movie="Extraction"
-                    data-image="https://image.tmdb.org/t/p/w500/6f5M1L5Y5N3X5N8M3L5P6Q7R8S.jpg"
-                    onclick="openMovie('Extraction', '2020', '7.8', 'https://image.tmdb.org/t/p/w500/6f5M1L5Y5N3X5N8M3L5P6Q7R8S.jpg')"
+                    data-genre="action adventure"
+                    onclick="openMovie(
+                        'Extraction',
+                        '2020',
+                        '7.8',
+                        'https://image.tmdb.org/t/p/w500/6f5M1L5Y5N3X5N8M3L5P6Q7R8S.jpg'
+                    )"
                 >
 
                     <img
@@ -437,16 +614,27 @@
                             ⭐ 7.8 | 2020
                         </p>
 
+                        <small>
+                            Action • Adventure
+                        </small>
+
                     </div>
 
                 </div>
 
 
+                <!-- BIRD BOX -->
+
                 <div
                     class="movie-card"
                     data-movie="Bird Box"
-                    data-image="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg"
-                    onclick="openMovie('Bird Box', '2018', '6.8', 'https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg')"
+                    data-genre="horror"
+                    onclick="openMovie(
+                        'Bird Box',
+                        '2018',
+                        '6.8',
+                        'https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg'
+                    )"
                 >
 
                     <img
@@ -464,16 +652,27 @@
                             ⭐ 6.8 | 2018
                         </p>
 
+                        <small>
+                            Horror
+                        </small>
+
                     </div>
 
                 </div>
 
 
+                <!-- GRAY MAN -->
+
                 <div
                     class="movie-card"
                     data-movie="The Gray Man"
-                    data-image="https://image.tmdb.org/t/p/w500/7D2Q8M5J3L6P9N4R5T7V8X2Y.jpg"
-                    onclick="openMovie('The Gray Man', '2022', '7.0', 'https://image.tmdb.org/t/p/w500/7D2Q8M5J3L6P9N4R5T7V8X2Y.jpg')"
+                    data-genre="action thriller"
+                    onclick="openMovie(
+                        'The Gray Man',
+                        '2022',
+                        '7.0',
+                        'https://image.tmdb.org/t/p/w500/7D2Q8M5J3L6P9N4R5T7V8X2Y.jpg'
+                    )"
                 >
 
                     <img
@@ -491,6 +690,10 @@
                             ⭐ 7.0 | 2022
                         </p>
 
+                        <small>
+                            Action • Thriller
+                        </small>
+
                     </div>
 
                 </div>
@@ -502,7 +705,7 @@
     </main>
 
 
-    <!-- ================= MY LIST ================= -->
+    <!-- MY LIST -->
 
     <section
         class="my-list-section"
@@ -537,7 +740,7 @@
     </section>
 
 
-    <!-- ================= NO RESULTS ================= -->
+    <!-- NO RESULTS -->
 
     <div
         id="noResults"
@@ -555,7 +758,7 @@
     </div>
 
 
-    <!-- ================= FOOTER ================= -->
+    <!-- FOOTER -->
 
     <footer>
 
