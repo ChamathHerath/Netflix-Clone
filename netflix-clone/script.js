@@ -706,3 +706,116 @@ function removeFromMyList(index) {
 // ==================================================
 
 displayMyList();
+
+// ==================================================
+// LOGIN PAGE
+// ==================================================
+
+const loginForm =
+    document.getElementById("loginForm");
+
+const togglePassword =
+    document.getElementById("togglePassword");
+
+const passwordInput =
+    document.getElementById("password");
+
+const loginError =
+    document.getElementById("loginError");
+
+
+/* SHOW / HIDE PASSWORD */
+
+if (togglePassword && passwordInput) {
+
+    togglePassword.addEventListener(
+        "click",
+        function () {
+
+            if (
+                passwordInput.type === "password"
+            ) {
+
+                passwordInput.type = "text";
+
+                togglePassword.textContent =
+                    "Hide";
+
+            } else {
+
+                passwordInput.type = "password";
+
+                togglePassword.textContent =
+                    "Show";
+            }
+
+        }
+    );
+
+}
+
+
+/* LOGIN FORM */
+
+if (loginForm) {
+
+    loginForm.addEventListener(
+        "submit",
+        function (event) {
+
+            event.preventDefault();
+
+            const email =
+                document
+                    .getElementById("email")
+                    .value
+                    .trim();
+
+            const password =
+                passwordInput
+                    .value
+                    .trim();
+
+
+            if (
+                email === "" ||
+                password === ""
+            ) {
+
+                loginError.textContent =
+                    "Please enter your email and password.";
+
+                return;
+
+            }
+
+
+            if (password.length < 4) {
+
+                loginError.textContent =
+                    "Your password must contain at least 4 characters.";
+
+                return;
+
+            }
+
+
+            loginError.textContent = "";
+
+
+            /*
+                FRONTEND DEMO ONLY
+            */
+
+            alert(
+                "Sign in successful! Welcome to Netflix."
+            );
+
+
+            window.location.href =
+                "index.html";
+
+        }
+    );
+
+}
