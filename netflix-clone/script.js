@@ -1,5 +1,5 @@
 // ==================================================
-// NETFLIX CLONE - FRONTEND JAVASCRIPT
+// NETFLIX CLONE JAVASCRIPT
 // ==================================================
 
 
@@ -7,9 +7,10 @@
 // MY LIST
 // ==================================================
 
-let myList = JSON.parse(
-    localStorage.getItem("netflixMyList")
-) || [];
+let myList =
+    JSON.parse(
+        localStorage.getItem("netflixMyList")
+    ) || [];
 
 
 // ==================================================
@@ -19,14 +20,14 @@ let myList = JSON.parse(
 const searchInput =
     document.getElementById("searchInput");
 
+const movieCards =
+    document.querySelectorAll(".movie-card");
+
+const noResults =
+    document.getElementById("noResults");
+
+
 if (searchInput) {
-
-    const movieCards =
-        document.querySelectorAll(".movie-card");
-
-    const noResults =
-        document.getElementById("noResults");
-
 
     searchInput.addEventListener(
         "input",
@@ -49,8 +50,40 @@ if (searchInput) {
                             .toLowerCase();
 
 
+                    const matchesSearch =
+                        movieName.includes(
+                            searchText
+                        );
+
+
+                    const activeGenre =
+                        document
+                            .querySelector(
+                                ".genre-btn.active"
+                            )
+                            ?.getAttribute(
+                                "data-genre"
+                            ) || "all";
+
+
+                    const movieGenres =
+                        card
+                            .getAttribute(
+                                "data-genre"
+                            )
+                            .toLowerCase();
+
+
+                    const matchesGenre =
+                        activeGenre === "all" ||
+                        movieGenres.includes(
+                            activeGenre
+                        );
+
+
                     if (
-                        movieName.includes(searchText)
+                        matchesSearch &&
+                        matchesGenre
                     ) {
 
                         card.style.display =
@@ -69,20 +102,10 @@ if (searchInput) {
             );
 
 
-            if (
-                foundMovies === 0 &&
-                searchText !== ""
-            ) {
-
-                noResults.style.display =
-                    "block";
-
-            } else {
-
-                noResults.style.display =
-                    "none";
-
-            }
+            showNoResults(
+                foundMovies,
+                searchText
+            );
 
         }
     );
@@ -91,7 +114,165 @@ if (searchInput) {
 
 
 // ==================================================
-// OPEN MOVIE DETAILS
+// GENRE FILTER
+// ==================================================
+
+const genreButtons =
+    document.querySelectorAll(
+        ".genre-btn"
+    );
+
+
+genreButtons.forEach(
+    function (button) {
+
+        button.addEventListener(
+            "click",
+            function () {
+
+
+                // Remove active class
+
+                genreButtons.forEach(
+                    function (btn) {
+
+                        btn.classList.remove(
+                            "active"
+                        );
+
+                    }
+                );
+
+
+                // Add active class
+
+                button.classList.add(
+                    "active"
+                );
+
+
+                const selectedGenre =
+                    button.getAttribute(
+                        "data-genre"
+                    );
+
+
+                const searchText =
+                    searchInput
+                        ? searchInput.value
+                            .toLowerCase()
+                            .trim()
+                        : "";
+
+
+                let foundMovies = 0;
+
+
+                movieCards.forEach(
+                    function (card) {
+
+                        const movieGenres =
+                            card
+                                .getAttribute(
+                                    "data-genre"
+                                )
+                                .toLowerCase();
+
+
+                        const movieName =
+                            card
+                                .getAttribute(
+                                    "data-movie"
+                                )
+                                .toLowerCase();
+
+
+                        const matchesGenre =
+                            selectedGenre ===
+                            "all" ||
+                            movieGenres.includes(
+                                selectedGenre
+                            );
+
+
+                        const matchesSearch =
+                            movieName.includes(
+                                searchText
+                            );
+
+
+                        if (
+                            matchesGenre &&
+                            matchesSearch
+                        ) {
+
+                            card.style.display =
+                                "block";
+
+                            foundMovies++;
+
+                        } else {
+
+                            card.style.display =
+                                "none";
+
+                        }
+
+                    }
+                );
+
+
+                showNoResults(
+                    foundMovies,
+                    searchText,
+                    selectedGenre
+                );
+
+            }
+        );
+
+    }
+);
+
+
+// ==================================================
+// NO RESULTS
+// ==================================================
+
+function showNoResults(
+    foundMovies,
+    searchText,
+    selectedGenre
+) {
+
+    if (!noResults) {
+        return;
+    }
+
+
+    if (
+        foundMovies === 0 &&
+        (
+            searchText !== "" ||
+            selectedGenre !== "all"
+        )
+    ) {
+
+        noResults.style.display =
+            "block";
+
+    } else {
+
+        noResults.style.display =
+            "none";
+
+    }
+
+}
+
+
+// ==================================================
+// OPEN MOVIE
 // ==================================================
 
 function openMovie(
@@ -106,11 +287,8 @@ function openMovie(
         JSON.stringify({
 
             title: title,
-
             year: year,
-
             rating: rating,
-
             image: image
 
         })
@@ -129,21 +307,31 @@ function openMovie(
 
 const selectedMovie =
     JSON.parse(
-        localStorage.getItem("selectedMovie")
+        localStorage.getItem(
+            "selectedMovie"
+        )
     );
 
 
 const detailsTitle =
-    document.getElementById("detailsTitle");
+    document.getElementById(
+        "detailsTitle"
+    );
 
 const detailsYear =
-    document.getElementById("detailsYear");
+    document.getElementById(
+        "detailsYear"
+    );
 
 const detailsRating =
-    document.getElementById("detailsRating");
+    document.getElementById(
+        "detailsRating"
+    );
 
 const detailsPoster =
-    document.getElementById("detailsPoster");
+    document.getElementById(
+        "detailsPoster"
+    );
 
 
 if (
@@ -174,13 +362,19 @@ if (
 // ==================================================
 
 const trailerBtn =
-    document.getElementById("trailerBtn");
+    document.getElementById(
+        "trailerBtn"
+    );
 
 const trailerModal =
-    document.getElementById("trailerModal");
+    document.getElementById(
+        "trailerModal"
+    );
 
 const closeTrailer =
-    document.getElementById("closeTrailer");
+    document.getElementById(
+        "closeTrailer"
+    );
 
 
 if (
@@ -189,8 +383,6 @@ if (
     closeTrailer
 ) {
 
-
-    // OPEN TRAILER
 
     trailerBtn.addEventListener(
         "click",
@@ -204,8 +396,6 @@ if (
     );
 
 
-    // CLOSE TRAILER
-
     closeTrailer.addEventListener(
         "click",
         function () {
@@ -218,14 +408,13 @@ if (
     );
 
 
-    // CLICK OUTSIDE TO CLOSE
-
     trailerModal.addEventListener(
         "click",
         function (event) {
 
             if (
-                event.target === trailerModal
+                event.target ===
+                trailerModal
             ) {
 
                 trailerModal.classList.remove(
@@ -237,8 +426,6 @@ if (
         }
     );
 
-
-    // ESCAPE KEY
 
     document.addEventListener(
         "keydown",
@@ -265,7 +452,9 @@ if (
 // ==================================================
 
 const myListBtn =
-    document.getElementById("myListBtn");
+    document.getElementById(
+        "myListBtn"
+    );
 
 
 if (myListBtn) {
@@ -295,7 +484,9 @@ if (myListBtn) {
 
             if (movieIndex === -1) {
 
-                myList.push(selectedMovie);
+                myList.push(
+                    selectedMovie
+                );
 
                 saveMyList();
 
@@ -380,7 +571,9 @@ function saveMyList() {
 
     localStorage.setItem(
         "netflixMyList",
-        JSON.stringify(myList)
+        JSON.stringify(
+            myList
+        )
     );
 
 }
@@ -408,7 +601,8 @@ function displayMyList() {
     }
 
 
-    myListContainer.innerHTML = "";
+    myListContainer.innerHTML =
+        "";
 
 
     if (myList.length === 0) {
@@ -440,6 +634,7 @@ function displayMyList() {
                 document.createElement(
                     "div"
                 );
+
 
             card.className =
                 "my-list-card";
@@ -501,18 +696,13 @@ function removeFromMyList(index) {
 
     displayMyList();
 
-
-    if (selectedMovie) {
-
-        updateMyListButton();
-
-    }
+    updateMyListButton();
 
 }
 
 
 // ==================================================
-// LOAD MY LIST
+// INITIALIZE MY LIST
 // ==================================================
 
 displayMyList();
