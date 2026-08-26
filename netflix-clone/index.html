@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Netflix Clone</title>
@@ -12,7 +13,7 @@
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- ================= NAVBAR ================= -->
 
     <header>
 
@@ -21,11 +22,27 @@
         </div>
 
         <nav>
-            <a href="#home">Home</a>
-            <a href="#movies">Movies</a>
-            <a href="#genres">Genres</a>
-            <a href="#mylist">My List</a>
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#movies">
+                Movies
+            </a>
+
+            <a href="#genres">
+                Genres
+            </a>
+
+            <a href="#mylist">
+                My List
+            </a>
+
         </nav>
+
+
+        <!-- SEARCH -->
 
         <div class="search-box">
 
@@ -39,16 +56,26 @@
 
         </div>
 
-        <button class="signin-btn">
+
+        <!-- SIGN IN -->
+
+        <a
+            href="login.html"
+            class="signin-btn"
+        >
             Sign In
-        </button>
+        </a>
 
     </header>
 
 
-    <!-- HERO -->
 
-    <section class="hero" id="home">
+    <!-- ================= HERO ================= -->
+
+    <section
+        class="hero"
+        id="home"
+    >
 
         <div class="hero-content">
 
@@ -60,24 +87,43 @@
                 Stranger Things
             </h1>
 
+
             <div class="hero-meta">
 
-                <span>2026</span>
-                <span>16+</span>
-                <span>4 Seasons</span>
+                <span>
+                    2026
+                </span>
+
+                <span>
+                    16+
+                </span>
+
+                <span>
+                    4 Seasons
+                </span>
 
             </div>
 
+
             <p>
-                When a young boy disappears, his friends discover
-                mysterious secrets and supernatural events in their town.
+                When a young boy disappears, his friends
+                discover mysterious secrets and supernatural
+                events in their town.
             </p>
 
-            <button class="play-btn">
+
+            <button
+                class="play-btn"
+                onclick="alert('Playing Stranger Things...')"
+            >
                 ▶ Play
             </button>
 
-            <button class="info-btn">
+
+            <button
+                class="info-btn"
+                onclick="alert('Stranger Things - Netflix Original')"
+            >
                 ⓘ More Info
             </button>
 
@@ -86,11 +132,13 @@
     </section>
 
 
-    <!-- MOVIES -->
+
+    <!-- ================= MAIN ================= -->
 
     <main id="movies">
 
-        <!-- GENRES -->
+
+        <!-- ================= GENRES ================= -->
 
         <section
             class="genre-filter-section"
@@ -101,6 +149,7 @@
                 Browse by Genre
             </h2>
 
+
             <div class="genre-buttons">
 
                 <button
@@ -110,12 +159,14 @@
                     All
                 </button>
 
+
                 <button
                     class="genre-btn"
                     data-genre="action"
                 >
                     Action
                 </button>
+
 
                 <button
                     class="genre-btn"
@@ -124,12 +175,14 @@
                     Comedy
                 </button>
 
+
                 <button
                     class="genre-btn"
                     data-genre="adventure"
                 >
                     Adventure
                 </button>
+
 
                 <button
                     class="genre-btn"
@@ -138,6 +191,7 @@
                     Animation
                 </button>
 
+
                 <button
                     class="genre-btn"
                     data-genre="fantasy"
@@ -145,12 +199,14 @@
                     Fantasy
                 </button>
 
+
                 <button
                     class="genre-btn"
                     data-genre="horror"
                 >
                     Horror
                 </button>
+
 
                 <button
                     class="genre-btn"
@@ -164,7 +220,8 @@
         </section>
 
 
-        <!-- TRENDING -->
+
+        <!-- ================= TRENDING ================= -->
 
         <section class="movies-section">
 
@@ -172,10 +229,11 @@
                 Trending Now
             </h2>
 
+
             <div class="movie-container">
 
 
-                <!-- MOANA -->
+                <!-- MOVIE 1 -->
 
                 <div
                     class="movie-card"
@@ -213,7 +271,8 @@
                 </div>
 
 
-                <!-- DEADPOOL -->
+
+                <!-- MOVIE 2 -->
 
                 <div
                     class="movie-card"
@@ -251,7 +310,8 @@
                 </div>
 
 
-                <!-- GLADIATOR -->
+
+                <!-- MOVIE 3 -->
 
                 <div
                     class="movie-card"
@@ -289,7 +349,8 @@
                 </div>
 
 
-                <!-- VENOM -->
+
+                <!-- MOVIE 4 -->
 
                 <div
                     class="movie-card"
@@ -327,7 +388,8 @@
                 </div>
 
 
-                <!-- INSIDE OUT -->
+
+                <!-- MOVIE 5 -->
 
                 <div
                     class="movie-card"
@@ -369,7 +431,8 @@
         </section>
 
 
-        <!-- POPULAR -->
+
+        <!-- ================= POPULAR ================= -->
 
         <section class="movies-section">
 
@@ -377,45 +440,8 @@
                 Popular Movies
             </h2>
 
+
             <div class="movie-container">
-
-
-                <!-- WONDER WOMAN -->
-
-                <div
-                    class="movie-card"
-                    data-movie="Wonder Woman"
-                    data-genre="action fantasy adventure"
-                    onclick="openMovie(
-                        'Wonder Woman',
-                        '2020',
-                        '7.4',
-                        'https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg'
-                    )"
-                >
-
-                    <img
-                        src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg"
-                        alt="Wonder Woman"
-                    >
-
-                    <div class="movie-info">
-
-                        <h3>
-                            Wonder Woman
-                        </h3>
-
-                        <p>
-                            ⭐ 7.4 | 2020
-                        </p>
-
-                        <small>
-                            Action • Fantasy
-                        </small>
-
-                    </div>
-
-                </div>
 
 
                 <!-- AVENGERS -->
@@ -456,6 +482,7 @@
                 </div>
 
 
+
                 <!-- SPIDER MAN -->
 
                 <div
@@ -492,6 +519,46 @@
                     </div>
 
                 </div>
+
+
+
+                <!-- WONDER WOMAN -->
+
+                <div
+                    class="movie-card"
+                    data-movie="Wonder Woman"
+                    data-genre="action fantasy adventure"
+                    onclick="openMovie(
+                        'Wonder Woman',
+                        '2020',
+                        '7.4',
+                        'https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg'
+                    )"
+                >
+
+                    <img
+                        src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg"
+                        alt="Wonder Woman"
+                    >
+
+                    <div class="movie-info">
+
+                        <h3>
+                            Wonder Woman
+                        </h3>
+
+                        <p>
+                            ⭐ 7.4 | 2020
+                        </p>
+
+                        <small>
+                            Action • Fantasy
+                        </small>
+
+                    </div>
+
+                </div>
+
 
 
                 <!-- BATMAN -->
@@ -536,13 +603,15 @@
         </section>
 
 
-        <!-- NETFLIX ORIGINALS -->
+
+        <!-- ================= NETFLIX ORIGINALS ================= -->
 
         <section class="movies-section">
 
             <h2>
                 Netflix Originals
             </h2>
+
 
             <div class="movie-container">
 
@@ -585,6 +654,7 @@
                 </div>
 
 
+
                 <!-- EXTRACTION -->
 
                 <div
@@ -623,6 +693,7 @@
                 </div>
 
 
+
                 <!-- BIRD BOX -->
 
                 <div
@@ -659,6 +730,7 @@
                     </div>
 
                 </div>
+
 
 
                 <!-- GRAY MAN -->
@@ -705,7 +777,8 @@
     </main>
 
 
-    <!-- MY LIST -->
+
+    <!-- ================= MY LIST ================= -->
 
     <section
         class="my-list-section"
@@ -716,11 +789,13 @@
             ❤️ My List
         </h2>
 
+
         <div
             class="my-list-container"
             id="myListContainer"
         >
         </div>
+
 
         <div
             class="empty-list"
@@ -740,7 +815,8 @@
     </section>
 
 
-    <!-- NO RESULTS -->
+
+    <!-- ================= NO RESULTS ================= -->
 
     <div
         id="noResults"
@@ -758,7 +834,8 @@
     </div>
 
 
-    <!-- FOOTER -->
+
+    <!-- ================= FOOTER ================= -->
 
     <footer>
 
@@ -766,9 +843,11 @@
             NETFLIX
         </div>
 
+
         <p>
             Questions? Contact us.
         </p>
+
 
         <div class="footer-links">
 
@@ -788,14 +867,23 @@
                 Privacy
             </a>
 
+            <a href="#">
+                Cookie Preferences
+            </a>
+
         </div>
 
+
         <p class="copyright">
-            © 2026 Netflix Clone | Created for Learning
+            © 2026 Netflix Clone |
+            Created for Learning
         </p>
 
     </footer>
 
+
+
+    <!-- ================= JAVASCRIPT ================= -->
 
     <script src="script.js"></script>
 
