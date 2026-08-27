@@ -6,850 +6,161 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Netflix Clone</title>
+    <title>Netflix - Sign Up</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="login-page">
 
-    <!-- ================= NAVBAR ================= -->
+    <!-- HEADER -->
 
-    <header>
+    <header class="login-header">
 
-        <div class="logo">
+        <a href="index.html" class="login-logo">
             NETFLIX
-        </div>
-
-        <nav>
-
-            <a href="#home">
-                Home
-            </a>
-
-            <a href="#movies">
-                Movies
-            </a>
-
-            <a href="#genres">
-                Genres
-            </a>
-
-            <a href="#mylist">
-                My List
-            </a>
-
-        </nav>
-
-
-        <!-- SEARCH -->
-
-        <div class="search-box">
-
-            <input
-                type="text"
-                id="searchInput"
-                placeholder="Search movies..."
-            >
-
-            <span>🔍</span>
-
-        </div>
-
-
-        <!-- SIGN IN -->
-
-        <a
-            href="login.html"
-            class="signin-btn"
-        >
-            Sign In
         </a>
 
     </header>
 
 
+    <!-- SIGN UP -->
 
-    <!-- ================= HERO ================= -->
+    <main class="login-container">
 
-    <section
-        class="hero"
-        id="home"
-    >
+        <div class="login-box">
 
-        <div class="hero-content">
+            <h1>Create Account</h1>
 
-            <span class="featured">
-                NETFLIX ORIGINAL
-            </span>
-
-            <h1>
-                Stranger Things
-            </h1>
-
-
-            <div class="hero-meta">
-
-                <span>
-                    2026
-                </span>
-
-                <span>
-                    16+
-                </span>
-
-                <span>
-                    4 Seasons
-                </span>
-
-            </div>
-
-
-            <p>
-                When a young boy disappears, his friends
-                discover mysterious secrets and supernatural
-                events in their town.
+            <p class="signup-description">
+                Create your account to start watching.
             </p>
 
 
-            <button
-                class="play-btn"
-                onclick="alert('Playing Stranger Things...')"
-            >
-                ▶ Play
-            </button>
+            <form id="signupForm">
+
+                <!-- NAME -->
+
+                <div class="input-group">
+
+                    <input
+                        type="text"
+                        id="signupName"
+                        placeholder="Full name"
+                        required
+                    >
+
+                </div>
 
 
-            <button
-                class="info-btn"
-                onclick="alert('Stranger Things - Netflix Original')"
-            >
-                ⓘ More Info
-            </button>
+                <!-- EMAIL -->
+
+                <div class="input-group">
+
+                    <input
+                        type="email"
+                        id="signupEmail"
+                        placeholder="Email address"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="input-group password-group">
+
+                    <input
+                        type="password"
+                        id="signupPassword"
+                        placeholder="Password"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        id="signupTogglePassword"
+                        class="show-password"
+                    >
+                        Show
+                    </button>
+
+                </div>
+
+
+                <!-- CONFIRM PASSWORD -->
+
+                <div class="input-group">
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm password"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- ERROR -->
+
+                <p
+                    id="signupError"
+                    class="login-error"
+                ></p>
+
+
+                <!-- SIGN UP BUTTON -->
+
+                <button
+                    type="submit"
+                    class="login-btn"
+                >
+                    Sign Up
+                </button>
+
+
+                <!-- LOGIN -->
+
+                <div class="signup-text">
+
+                    <span>
+                        Already have an account?
+                    </span>
+
+                    <a href="login.html">
+                        Sign in.
+                    </a>
+
+                </div>
+
+
+                <!-- INFO -->
+
+                <p class="login-info">
+
+                    By signing up, you agree to our
+                    Terms of Use and Privacy Policy.
+
+                </p>
+
+            </form>
 
         </div>
-
-    </section>
-
-
-
-    <!-- ================= MAIN ================= -->
-
-    <main id="movies">
-
-
-        <!-- ================= GENRES ================= -->
-
-        <section
-            class="genre-filter-section"
-            id="genres"
-        >
-
-            <h2>
-                Browse by Genre
-            </h2>
-
-
-            <div class="genre-buttons">
-
-                <button
-                    class="genre-btn active"
-                    data-genre="all"
-                >
-                    All
-                </button>
-
-
-                <button
-                    class="genre-btn"
-                    data-genre="action"
-                >
-                    Action
-                </button>
-
-
-                <button
-                    class="genre-btn"
-                    data-genre="comedy"
-                >
-                    Comedy
-                </button>
-
-
-                <button
-                    class="genre-btn"
-                    data-genre="adventure"
-                >
-                    Adventure
-                </button>
-
-
-                <button
-                    class="genre-btn"
-                    data-genre="animation"
-                >
-                    Animation
-                </button>
-
-
-                <button
-                    class="genre-btn"
-                    data-genre="fantasy"
-                >
-                    Fantasy
-                </button>
-
-
-                <button
-                    class="genre-btn"
-                    data-genre="horror"
-                >
-                    Horror
-                </button>
-
-
-                <button
-                    class="genre-btn"
-                    data-genre="sci-fi"
-                >
-                    Sci-Fi
-                </button>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ================= TRENDING ================= -->
-
-        <section class="movies-section">
-
-            <h2>
-                Trending Now
-            </h2>
-
-
-            <div class="movie-container">
-
-
-                <!-- MOVIE 1 -->
-
-                <div
-                    class="movie-card"
-                    data-movie="Moana 2"
-                    data-genre="animation adventure fantasy"
-                    onclick="openMovie(
-                        'Moana 2',
-                        '2024',
-                        '7.6',
-                        'https://image.tmdb.org/t/p/w500/1XDDXPXGiI8id7MrUxK36ke7gkX.jpg'
-                    )"
-                >
-
-                    <img
-                        src="https://image.tmdb.org/t/p/w500/1XDDXPXGiI8id7MrUxK36ke7gkX.jpg"
-                        alt="Moana 2"
-                    >
-
-                    <div class="movie-info">
-
-                        <h3>
-                            Moana 2
-                        </h3>
-
-                        <p>
-                            ⭐ 7.6 | 2024
-                        </p>
-
-                        <small>
-                            Animation • Adventure
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- MOVIE 2 -->
-
-                <div
-                    class="movie-card"
-                    data-movie="Deadpool"
-                    data-genre="action comedy adventure"
-                    onclick="openMovie(
-                        'Deadpool',
-                        '2024',
-                        '8.0',
-                        'https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg'
-                    )"
-                >
-
-                    <img
-                        src="https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg"
-                        alt="Deadpool"
-                    >
-
-                    <div class="movie-info">
-
-                        <h3>
-                            Deadpool
-                        </h3>
-
-                        <p>
-                            ⭐ 8.0 | 2024
-                        </p>
-
-                        <small>
-                            Action • Comedy
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- MOVIE 3 -->
-
-                <div
-                    class="movie-card"
-                    data-movie="Gladiator II"
-                    data-genre="action adventure"
-                    onclick="openMovie(
-                        'Gladiator II',
-                        '2024',
-                        '7.1',
-                        'https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg'
-                    )"
-                >
-
-                    <img
-                        src="https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg"
-                        alt="Gladiator II"
-                    >
-
-                    <div class="movie-info">
-
-                        <h3>
-                            Gladiator II
-                        </h3>
-
-                        <p>
-                            ⭐ 7.1 | 2024
-                        </p>
-
-                        <small>
-                            Action • Adventure
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- MOVIE 4 -->
-
-                <div
-                    class="movie-card"
-                    data-movie="Venom"
-                    data-genre="action sci-fi adventure"
-                    onclick="openMovie(
-                        'Venom',
-                        '2024',
-                        '7.2',
-                        'https://image.tmdb.org/t/p/w500/5CemD1I8k1R0R7cK4yK6a5Q5y7A.jpg'
-                    )"
-                >
-
-                    <img
-                        src="https://image.tmdb.org/t/p/w500/5CemD1I8k1R0R7cK4yK6a5Q5y7A.jpg"
-                        alt="Venom"
-                    >
-
-                    <div class="movie-info">
-
-                        <h3>
-                            Venom
-                        </h3>
-
-                        <p>
-                            ⭐ 7.2 | 2024
-                        </p>
-
-                        <small>
-                            Action • Sci-Fi
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- MOVIE 5 -->
-
-                <div
-                    class="movie-card"
-                    data-movie="Inside Out 2"
-                    data-genre="animation comedy adventure"
-                    onclick="openMovie(
-                        'Inside Out 2',
-                        '2024',
-                        '8.0',
-                        'https://image.tmdb.org/t/p/w500/q719jXXEzOoYaps6babgKnONONX.jpg'
-                    )"
-                >
-
-                    <img
-                        src="https://image.tmdb.org/t/p/w500/q719jXXEzOoYaps6babgKnONONX.jpg"
-                        alt="Inside Out 2"
-                    >
-
-                    <div class="movie-info">
-
-                        <h3>
-                            Inside Out 2
-                        </h3>
-
-                        <p>
-                            ⭐ 8.0 | 2024
-                        </p>
-
-                        <small>
-                            Animation • Comedy
-                        </small>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ================= POPULAR ================= -->
-
-        <section class="movies-section">
-
-            <h2>
-                Popular Movies
-            </h2>
-
-
-            <div class="movie-container">
-
-
-                <!-- AVENGERS -->
-
-                <div
-                    class="movie-card"
-                    data-movie="Avengers"
-                    data-genre="action adventure sci-fi"
-                    onclick="openMovie(
-                        'Avengers',
-                        '2018',
-                        '8.4',
-                        'https://image.tmdb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg'
-                    )"
-                >
-
-                    <img
-                        src="https://image.tmdb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg"
-                        alt="Avengers"
-                    >
-
-                    <div class="movie-info">
-
-                        <h3>
-                            Avengers
-                        </h3>
-
-                        <p>
-                            ⭐ 8.4 | 2018
-                        </p>
-
-                        <small>
-                            Action • Adventure
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- SPIDER MAN -->
-
-                <div
-                    class="movie-card"
-                    data-movie="Spider-Man"
-                    data-genre="action adventure sci-fi"
-                    onclick="openMovie(
-                        'Spider-Man',
-                        '2021',
-                        '8.2',
-                        'https://image.tmdb.org/t/p/w500/6ELCZlTA5lGUops70hKdB83WJxH.jpg'
-                    )"
-                >
-
-                    <img
-                        src="https://image.tmdb.org/t/p/w500/6ELCZlTA5lGUops70hKdB83WJxH.jpg"
-                        alt="Spider-Man"
-                    >
-
-                    <div class="movie-info">
-
-                        <h3>
-                            Spider-Man
-                        </h3>
-
-                        <p>
-                            ⭐ 8.2 | 2021
-                        </p>
-
-                        <small>
-                            Action • Adventure
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- WONDER WOMAN -->
-
-                <div
-                    class="movie-card"
-                    data-movie="Wonder Woman"
-                    data-genre="action fantasy adventure"
-                    onclick="openMovie(
-                        'Wonder Woman',
-                        '2020',
-                        '7.4',
-                        'https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg'
-                    )"
-                >
-
-                    <img
-                        src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg"
-                        alt="Wonder Woman"
-                    >
-
-                    <div class="movie-info">
-
-                        <h3>
-                            Wonder Woman
-                        </h3>
-
-                        <p>
-                            ⭐ 7.4 | 2020
-                        </p>
-
-                        <small>
-                            Action • Fantasy
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- BATMAN -->
-
-                <div
-                    class="movie-card"
-                    data-movie="The Batman"
-                    data-genre="action adventure"
-                    onclick="openMovie(
-                        'The Batman',
-                        '2022',
-                        '7.8',
-                        'https://image.tmdb.org/t/p/w500/9O1Iy9od7vL2q9T8w5s6x3j2.jpg'
-                    )"
-                >
-
-                    <img
-                        src="https://image.tmdb.org/t/p/w500/9O1Iy9od7vL2q9T8w5s6x3j2.jpg"
-                        alt="The Batman"
-                    >
-
-                    <div class="movie-info">
-
-                        <h3>
-                            The Batman
-                        </h3>
-
-                        <p>
-                            ⭐ 7.8 | 2022
-                        </p>
-
-                        <small>
-                            Action • Adventure
-                        </small>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ================= NETFLIX ORIGINALS ================= -->
-
-        <section class="movies-section">
-
-            <h2>
-                Netflix Originals
-            </h2>
-
-
-            <div class="movie-container">
-
-
-                <!-- RED NOTICE -->
-
-                <div
-                    class="movie-card"
-                    data-movie="Red Notice"
-                    data-genre="action comedy"
-                    onclick="openMovie(
-                        'Red Notice',
-                        '2021',
-                        '7.0',
-                        'https://image.tmdb.org/t/p/w500/49zB8n6y5J5J3v4Y7J3L4M5N6O.jpg'
-                    )"
-                >
-
-                    <img
-                        src="https://image.tmdb.org/t/p/w500/49zB8n6y5J5J3v4Y7J3L4M5N6O.jpg"
-                        alt="Red Notice"
-                    >
-
-                    <div class="movie-info">
-
-                        <h3>
-                            Red Notice
-                        </h3>
-
-                        <p>
-                            ⭐ 7.0 | 2021
-                        </p>
-
-                        <small>
-                            Action • Comedy
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- EXTRACTION -->
-
-                <div
-                    class="movie-card"
-                    data-movie="Extraction"
-                    data-genre="action adventure"
-                    onclick="openMovie(
-                        'Extraction',
-                        '2020',
-                        '7.8',
-                        'https://image.tmdb.org/t/p/w500/6f5M1L5Y5N3X5N8M3L5P6Q7R8S.jpg'
-                    )"
-                >
-
-                    <img
-                        src="https://image.tmdb.org/t/p/w500/6f5M1L5Y5N3X5N8M3L5P6Q7R8S.jpg"
-                        alt="Extraction"
-                    >
-
-                    <div class="movie-info">
-
-                        <h3>
-                            Extraction
-                        </h3>
-
-                        <p>
-                            ⭐ 7.8 | 2020
-                        </p>
-
-                        <small>
-                            Action • Adventure
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- BIRD BOX -->
-
-                <div
-                    class="movie-card"
-                    data-movie="Bird Box"
-                    data-genre="horror"
-                    onclick="openMovie(
-                        'Bird Box',
-                        '2018',
-                        '6.8',
-                        'https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg'
-                    )"
-                >
-
-                    <img
-                        src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg"
-                        alt="Bird Box"
-                    >
-
-                    <div class="movie-info">
-
-                        <h3>
-                            Bird Box
-                        </h3>
-
-                        <p>
-                            ⭐ 6.8 | 2018
-                        </p>
-
-                        <small>
-                            Horror
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- GRAY MAN -->
-
-                <div
-                    class="movie-card"
-                    data-movie="The Gray Man"
-                    data-genre="action thriller"
-                    onclick="openMovie(
-                        'The Gray Man',
-                        '2022',
-                        '7.0',
-                        'https://image.tmdb.org/t/p/w500/7D2Q8M5J3L6P9N4R5T7V8X2Y.jpg'
-                    )"
-                >
-
-                    <img
-                        src="https://image.tmdb.org/t/p/w500/7D2Q8M5J3L6P9N4R5T7V8X2Y.jpg"
-                        alt="The Gray Man"
-                    >
-
-                    <div class="movie-info">
-
-                        <h3>
-                            The Gray Man
-                        </h3>
-
-                        <p>
-                            ⭐ 7.0 | 2022
-                        </p>
-
-                        <small>
-                            Action • Thriller
-                        </small>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
 
     </main>
 
 
+    <!-- FOOTER -->
 
-    <!-- ================= MY LIST ================= -->
-
-    <section
-        class="my-list-section"
-        id="mylist"
-    >
-
-        <h2>
-            ❤️ My List
-        </h2>
-
-
-        <div
-            class="my-list-container"
-            id="myListContainer"
-        >
-        </div>
-
-
-        <div
-            class="empty-list"
-            id="emptyList"
-        >
-
-            <h3>
-                Your list is empty
-            </h3>
-
-            <p>
-                Add movies to your list and they will appear here.
-            </p>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- ================= NO RESULTS ================= -->
-
-    <div
-        id="noResults"
-        class="no-results"
-    >
-
-        <h2>
-            No movies found 😔
-        </h2>
-
-        <p>
-            Try searching for another movie.
-        </p>
-
-    </div>
-
-
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer>
-
-        <div class="footer-logo">
-            NETFLIX
-        </div>
-
+    <footer class="login-footer">
 
         <p>
             Questions? Contact us.
         </p>
 
-
-        <div class="footer-links">
+        <div class="login-footer-links">
 
             <a href="#">
                 FAQ
@@ -867,23 +178,22 @@
                 Privacy
             </a>
 
-            <a href="#">
-                Cookie Preferences
-            </a>
-
         </div>
 
+        <select class="language-select">
 
-        <p class="copyright">
-            © 2026 Netflix Clone |
-            Created for Learning
-        </p>
+            <option>
+                English
+            </option>
+
+            <option>
+                Sinhala
+            </option>
+
+        </select>
 
     </footer>
 
-
-
-    <!-- ================= JAVASCRIPT ================= -->
 
     <script src="script.js"></script>
 
